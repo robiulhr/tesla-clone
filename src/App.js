@@ -1,56 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import Nav from './components/Nav';
+import PageLayouts from './components/PageLayouts';
+import { FullPage, Slide } from 'react-full-page';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <FullPage>
+        <Nav />
+        <Slide>
+          <PageLayouts title="Model S" description="Order Online for Touchless Delivery" image="/img/model-s.jpg" leftBtntext="Customer order" rightBtntext="Existing inventory" arrowDown="true" />
+        </Slide>
+        <Slide>
+          <PageLayouts title="Model Y" description="Order Online for Touchless Delivery" image="/img/model-y.jpg" leftBtntext="Customer order" rightBtntext="Existing inventory" />
+        </Slide>
+        <Slide>
+          <PageLayouts title="Model 3" description="Order Online for Touchless Delivery" image="/img/model-3.jpg" leftBtntext="Customer order" rightBtntext="Existing inventory" />
+        </Slide>
+        <Slide>
+          <PageLayouts title="Model X" description="Order Online for Touchless Delivery" image="/img/model-x.jpg" leftBtntext="Customer order" rightBtntext="Existing inventory" />
+        </Slide>
+        <Slide>
+          <PageLayouts title="Solar Panels" description="Lowest Cost Solar Panels in America" image="/img/solar-panel.jpg" leftBtntext="order now" rightBtntext="Learn more" />
+        </Slide>
+        <Slide>
+          <PageLayouts title="Solar Roof" description="Produce Clean Energy From Your Roof" image="/img/solar-roof.jpg" leftBtntext="order now" rightBtntext="Learn more" />
+        </Slide>
+        <Slide>
+          <PageLayouts title="Accessories" description="Produce Clean Energy From Your Roof" image="/img/accessories.jpg" leftBtntext="shop now" footer="true" />
+        </Slide>
+      </FullPage>
     </div>
   );
 }
