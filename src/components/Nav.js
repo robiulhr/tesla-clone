@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import logo from '../img/logo/logo.svg';
 function Nav() {
     const [sideBarOpen, setsideBarOpen] = useState(false)
     return (
@@ -9,7 +10,7 @@ function Nav() {
             </SideMunufade>
             <NavSection>
                 <NavLeft>
-                    <a href='#'><img src='/img/logo/logo.svg' alt='Logo' /></a>
+                    <a href='#'><img src={logo} alt='Logo' /></a>
                 </NavLeft>
                 <NavMenu>
                     <li>Model S</li>
@@ -104,6 +105,7 @@ right: 0;
 bottom: 0;
 z-index: 200;
 ${props => props.sidemenustatus === false ? 'display: none' : 'display: fixed'};
+transition: all 1.8s ease-in-out !important;
 `
 const SideMenu = styled(NavMenu)`
 flex-direction:column;
